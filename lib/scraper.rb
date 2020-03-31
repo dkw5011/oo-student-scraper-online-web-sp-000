@@ -11,7 +11,7 @@ class Scraper
   
     doc.css("div.roster-cards-container").each do |student|
       students = {
-        :location => student.css("h2.profile-location"),
+        :location => student.css("h2.profile-location").text,
         :name => student.css("div.vitals-text-container h1.profile-name").text
         }
       
